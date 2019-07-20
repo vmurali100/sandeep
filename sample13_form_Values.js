@@ -17,4 +17,14 @@ function getData() {
   }
 
   console.log(user);
+  // for Checkboxes
+
+  var cboxes = document.getElementsByName("role");
+  var cboxValue = [];
+  for (i = 0; i < cboxes.length; i++) {
+    if (cboxes[i].checked) {
+      cboxValue.push(cboxes[i].value);
+    }
+  }
+  user.roles = cboxValue;
 }
