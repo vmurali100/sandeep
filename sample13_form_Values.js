@@ -1,3 +1,4 @@
+var users = [];
 function getData() {
   var user = {
     fname: "",
@@ -27,4 +28,31 @@ function getData() {
     }
   }
   user.roles = cboxValue;
+
+  //Adding the Object to Array
+  users.push(user);
+
+  //Calling function to display Latest Values
+  displayUsers();
+  clearForm(user);
+}
+
+function clearForm(obj) {
+  for (a in obj) {
+    document.getElementById(a).value = "";
+  }
+}
+function displayUsers() {
+  document.getElementById("myTable").innerHTML = "";
+  for (i = 0; i < users.length; i++) {
+    var myTr_ = document.createElement("tr");
+    for (a in users[i]) {
+      if (a != "roles") {
+        var myTd = document.createElement("td");
+        myTd.innerHTML = users[i][a];
+        myTr_.appendChild(myTd);
+      }
+    }
+    document.getElementById("myTable").appendChild(myTr_);
+  }
 }
