@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj ={}
+
+        var myArry =[]
+
+
+        function Person(fname,lname,email){
+            this.fname = fname
+            this.lname = lname
+            this.email = email
+        }
+
+        Person.prototype.getFullName= function (){
+            return this.fname +" "+this.lname
+        }
+
+        var person1 = new Person("Murali1","Krishna","vmurali100@gmail.com")
+        var person2 = new Person("Murali2","Krishna","vmurali100@gmail.com")
+        var person3 = new Person("Murali3","Krishna","vmurali100@gmail.com")
+        var person4 = new Person("Murali4","Krishna","vmurali100@gmail.com")
+        var person5 = new Person("Murali5","Krishna","vmurali100@gmail.com")
+
+        console.log(person1)
+        console.log(person2)
+        console.log(person3)
+        console.log(person4)
+
+    </script>
+</body>
+</html>
