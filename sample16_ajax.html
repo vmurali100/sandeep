@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getData()">Click</button>
+    <script>
+        function getData(){
+            console.log("Hello world")
+            var abc = new XMLHttpRequest;
+            abc.onreadystatechange = function(){
+                if(abc.readyState == 4 && abc.status == 200){
+                    console.log(abc.response)
+                    var data = JSON.parse(abc.response)
+                    console.log(data)
+                }
+            }
+
+            abc.open("GET","http://www.filltext.com/?rows=10&fname={firstName}&lname={lastName}&tel={phone|format}&address={streetAddress}&city={city}&state={usState|abbr}&zip={zip}&pretty=true")
+            abc.send()
+        }
+    </script>
+</body>
+</html>
