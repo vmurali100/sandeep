@@ -6,15 +6,23 @@ export default class Sample2 extends Component {
         super(props)
     
         this.state = {
-             
+             msg,
+             users
         }
+    }
+
+    sample2method=(obj)=>{
+        console.log("I am from Sample2(Parent)")
+        let myUsers = [...this.state.users]
+        myUsers.push(obj)
+        this.setState({users:myUsers})
     }
     
     render() {
         return (
             <div>
                 <h2>I am From Sample Compoentn 2</h2>
-                <Sample3 message={msg} usersDetails={users}></Sample3>
+                <Sample3 info={this.state} samfunc={this.sample2method}></Sample3>
             </div>
         )
     }

@@ -8,17 +8,31 @@ export default class Sample3 extends Component {
              
         }
         console.log(props)
+
     }
     
+    addAPerson=()=>{
+        let person = {
+            "fname": "Murali",
+            "lname": "Krishna",
+            "state": "KA",
+            "zip": 63065
+        }
+        this.props.samfunc(person)
+    }
     render() {
+        //Destructering
+        const { msg , users} = this.props.info
+        
         return (
             <div>
                 <hr/>
+                <button onClick={this.addAPerson}>Call Method from Sample2</button>
                 <h3>I am from Sample 3 </h3>
-                <p>Message Received From Sample 2 : {this.props.message.info}</p>
+                <p>Message Received From Sample 2 : {msg.info}</p>
                 <ul>
                 {/* Array Iteration */}
-                    {this.props.usersDetails.map((obj)=>{
+                    {users.map((obj)=>{
                         if(obj.fname == "Anita"){
                             return <li key={obj.lname} onClick={()=>{this.clickUser(obj)}}>{obj.lname}</li>   
                         }else{
