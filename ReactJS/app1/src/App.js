@@ -1,6 +1,7 @@
 import React from "react";
-import Sample from "./Sample";
-import Sample2 from "./Sample2";
+// import Sample from "./Sample";
+// import Sample2 from "./Sample2";
+import Sample4 from "./Sample4";
 // import Sandeep1, { Sandeep2 } from "./Sandeep";
 
 export default function App() {
@@ -10,7 +11,8 @@ export default function App() {
       {/* <Sandeep1 />
       <Sandeep2 /> */}
       {/* <Sample></Sample> */}
-      <Sample2></Sample2>
+      {/* <Sample2></Sample2> */}
+      <Sample4/>
     </div>
   );
 }
