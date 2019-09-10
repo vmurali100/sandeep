@@ -1,0 +1,16 @@
+{
+  "students": [],
+  "login": [
+    { "email": "vmurali100@gmail.com", "password": "123456", "role": "admin" },
+    {
+      "email": "vmurali100@gmail.com",
+      "password": "4567",
+      "role": "employee"
+    },
+    {
+      "email": "vmurali100@gmail.com",
+      "password": "3456",
+      "role": "student"
+    }
+  ]
+}
