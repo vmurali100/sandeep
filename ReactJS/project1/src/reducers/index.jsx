@@ -1,26 +1,18 @@
-export default function dosomething(state = { num: 0 }, action) {
+export default function dosomething(state = { users: [] }, action) {
   switch (action.type) {
     case "CREATE":
-      console.log("You Have clicked on Create");
-      var num = state.num + 1;
-      return { num };
+      console.log("You Have clicked on Create", action);
+      return {};
       break;
 
-    case "EDIT":
-      console.log("You Have clicked on Edit");
-      return state;
-      break;
-
-    case "UPDATE":
-      return state;
-      break;
-
-    case "DELETE":
-      return state;
+    case "GET":
+      console.log("You Have clicked on GET", action);
+      let users = [...action.payLoad];
+      return { users };
       break;
 
     default:
-      return {};
+      return state;
       break;
   }
 }
